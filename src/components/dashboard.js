@@ -1,22 +1,24 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchProtectedData} from '../actions/protected-data';
+import {fetchDeck} from '../actions/deck';
+import DeckForm from './deck-form';
 
 export class Dashboard extends React.Component {
-    componentDidMount() {
-        this.props.dispatch(fetchProtectedData());
+    componentWillMount() {
+        this.props.dispatch(fetchDeck(this.props.userId));
     }
 
     render() {
         return (
             <div className="dashboard">
-                <div className="dashboard-username">
-                    Username: {this.props.username}
-                </div>
-                <div className="dashboard-protected-data">
-                    Protected data: {this.props.protectedData}
-                </div>
+                <DeckForm 
+                    sideA={this.props.sideA}
+                    onSubmit={this.props.sideB}
+                    error={this.props.error}
+                    inputAnswer={this.props.inputAnswer}
+                    currentAnswer={this.props.currentAnswer}
+                    feedback={this.props.feedback}/>
             </div>
         );
     }
@@ -24,9 +26,17 @@ export class Dashboard extends React.Component {
 
 const mapStateToProps = state => {
     const {currentUser} = state.auth;
+    const currentCard = currentUser.currentCard;
+    console.log('LOOK HERE what is side A now', currentUser.deck[currentCard].sideA);
     return {
-        username: state.auth.currentUser.username,
-        protectedData: state.protectedData.data
+        username: currentUser.username,
+        userId: currentUser.id,
+        sideA: currentUser.deck[currentCard].sideA,
+        sideB: currentUser.deck[currentCard].sideB,
+        error: currentUser.deck.error,
+        inputAnswer: state.deckData.inputAnswer,
+        currentAnswer: state.deckData.currentAnswer,
+        feedback: state.deckData.feedback
     };
 };
 
