@@ -6,7 +6,7 @@ import DeckForm from './deck-form';
 
 export class Dashboard extends React.Component {
     componentWillMount() {
-        this.props.dispatch(fetchDeck(this.props.userId));
+        return this.props.dispatch(fetchDeck(this.props.userId));
     }
 
     render() {
@@ -26,14 +26,12 @@ export class Dashboard extends React.Component {
 
 const mapStateToProps = state => {
     const {currentUser} = state.auth;
-    const currentCard = currentUser.currentCard;
-    console.log('LOOK HERE what is side A now', currentUser.deck[currentCard].sideA);
     return {
         username: currentUser.username,
         userId: currentUser.id,
-        sideA: currentUser.deck[currentCard].sideA,
-        sideB: currentUser.deck[currentCard].sideB,
-        error: currentUser.deck.error,
+        sideA: state.deckData.sideA,
+        sideB: state.deckData.sideB,
+        error: state.deckData.error,
         inputAnswer: state.deckData.inputAnswer,
         currentAnswer: state.deckData.currentAnswer,
         feedback: state.deckData.feedback
