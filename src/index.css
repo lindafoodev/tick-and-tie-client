@@ -1,5 +1,33 @@
 body {
-  margin: 0;
+  margin: 0px;
   padding: 0;
   font-family: sans-serif;
+}
+
+.center{
+
+  justify-content: center;
+  text-align: center;
+}
+
+.header-bar{
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7CB78F;
+  color: black;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.home{
+  margin: 0 0 auto;
+  text-align: center;
+  height: 45%;
+  background-size: cover;
+  background-position: top;
+  background: url('./images/accounting-balance-blur-164686.jpg');
+  background-image: linear-gradient(to right bottom, #7cb78f, #00a8a3);
 }
