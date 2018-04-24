@@ -12,7 +12,7 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <h2>Welcome to Tick-and-Tie App</h2>
+            <h2>Welcome to Tick-and-Tie</h2>
             <LoginForm />
             <Link to="/register">Register</Link>
         </div>
