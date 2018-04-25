@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
 export function Hamburger(props) {
@@ -14,7 +13,6 @@ export function Hamburger(props) {
       display: `${isOpen ? 'block' : 'none'}`,
     }
   };
-
     return (
       <div className="hamburger-nav" onClick={props.menuClicked}>
           <div className="hamburger">
@@ -25,7 +23,7 @@ export function Hamburger(props) {
         <div style={Object.assign({}, style.base, style.link)}>
                 <nav className="ham-menu">
                     <ul className="ham-menu-list">
-                        {props.loggedIn ? <div className="ham-menu-list-extended"><li className="ham-menu-list-item"> <button onClick={() => this.logOut()}>Log Out</button> </li></div>:
+                        {props.loggedIn ? <div className="ham-menu-list-extended bold subtitle"><li className="ham-menu-list-item"> <Link onClick={props.logOutClicked} to={`/`} className='link'>Log Out</Link></li></div>:
                     <div className="ham-menu-list-extended bold subtitle">
                         <li className="ham-menu-list-item">
                             <Link to={`/`} className='link'>
@@ -42,18 +40,10 @@ export function Hamburger(props) {
                                 Register
                             </Link>
                         </li>
-                    </div> }
+                    </div>}
                     </ul>
                 </nav>
             </div>
         </div>
     );
 }
-
-const mapStateToProps = state => {
-    return {
-        loggedIn: state.auth.currentUser !== null,
-    }
-};
-
-export default connect(mapStateToProps)(Hamburger);

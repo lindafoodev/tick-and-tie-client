@@ -14,8 +14,10 @@ export class HeaderBar extends React.Component {
     }
 
     logOut() {
+        console.log('log out clicked');
         this.props.dispatch(clearAuth());
         clearAuthToken();
+        
     }
 
     handleClick(){
@@ -32,7 +34,7 @@ export class HeaderBar extends React.Component {
                         <li className="logo bold title">
                             Tick-and-Tie
                         </li>
-                        {this.props.loggedIn ? <div className="menu-list-extended"><li className="menu-list-item noDisplay"> <button onClick={() => this.logOut()}>Log Out</button> </li></div>:
+                        {this.props.loggedIn ? <div className="menu-list-extended bold subtitle"><li className="menu-list-item noDisplay"> <Link onClick={this.logOut.bind(this)} to={`/`} className='link'>Log Out</Link></li></div>:
                     <div className="menu-list-extended bold subtitle">
                         <li className="menu-list-item noDisplay">
                             <Link to={`/`} className='link'>
@@ -55,6 +57,8 @@ export class HeaderBar extends React.Component {
                 <Hamburger 
                 isOpen={this.state.open}
                 menuClicked={this.handleClick.bind(this)}
+                logOutClicked={this.logOut.bind(this)}
+                loggedIn={this.props.loggedIn}
             />
             </div>
         );
