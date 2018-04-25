@@ -10,7 +10,19 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <div className="header"></div>
+            <div className="homepage-splash"></div>
+            <div className="splashContainer">
+                <div className="splashContentWrapper">
+                    <div className="splashContent">
+                        <h1 className="splashHeading">Easy tool to<br/>connect the dots.</h1>
+                        <p className="splashParagraph">By leveraging spaced repetition to reinforce your learning, you can master just about anything with small and consistent effort. </p>
+                        <div className="splashButton">
+                            <a className="splashButtonLink" role="button" href="/register"><span className="buttonWrapper">Get started</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

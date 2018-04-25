@@ -26,7 +26,6 @@ export function LoginPage(props) {
                 <div className='redirect'>
                     Or try out the <Link to="/dashboard" onClick={() => demoLogIn({username:'guest', password:'guest12345'})}>Demo</Link> account.
                 </div>
-            <Link to="/dashboard">Dashboard</Link>
         </div>
     );
 }

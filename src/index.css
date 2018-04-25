@@ -1,24 +1,6 @@
 * {
   box-sizing: border-box;
 }
-/* 
-html{
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  padding-right: 17px;
-  box-sizing: content-box;
-  margin: 0px;
-  padding: 0;
-  font-family: 'Titillium Web', sans-serif;
-} */
 
 body {
   margin: 0;
@@ -50,36 +32,6 @@ body {
   font-size: 1em;
 }
 
-@media (max-width: 800px){
-  .noDisplay{
-    display: none;
-  }
-
-  .ham-menu{
-    background-color: #00A8A3;
-    display: flex;
-  }
-
-
-
-  .hamburger {
-    position: absolute;
-    right: 30px;
-    width: 48px;
-    height: 42px;
-    border: 1px solid white;
-    border-radius: 2px;
-    box-shadow: 0 0 2px white;
-    padding: 10px 10px;
-    top: 18px;
-  }
-
-  .hamburger-stripe {
-    background-color: white;
-    height: 3px;
-    margin-bottom: 5px;
-  }
-}
 
 .logo {
   position: absolute;
@@ -87,37 +39,10 @@ body {
   color: white;
 }
 
-/* .home{
-  margin: auto;
-  padding: 0;
-  height:700px;
-  width: 100%;
-  text-align: center;
-  object-fit: contain;
-  background-size: cover;
-  background-position: center center;
-  background: url('./images/accounting-balance-blur-164686.jpg');
-  /*background-image: linear-gradient(to right bottom, #7cb78f, #00a8a3);*/
-
-
 .home{
   text-align: center;
   height: 100vh;
 }
-
-/* .header{
-  background: url('./images/accounting-balance-blur-164686.jpg');
-  background-size: cover;
-  object-fit: contain;
-  background-position: top;
-  height: 100%;
-}
-
-.layer{
-  background-image: linear-gradient(to right bottom,	rgba(124, 183, 143, .7), 	rgba(0, 168, 163, .7));
-  height: 100%;
-  width: 100%;
-}   */
 
 .menu {
   width: 100%;
@@ -145,6 +70,35 @@ li > a:hover {
   text-decoration: underline
 }
 
+@media (max-width: 800px){
+  .noDisplay{
+    display: none;
+  }
+
+  .ham-menu{
+    background-color: #00A8A3;
+    display: flex;
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 30px;
+    width: 48px;
+    height: 42px;
+    border: 1px solid white;
+    border-radius: 2px;
+    box-shadow: 0 0 2px white;
+    padding: 10px 10px;
+    top: 18px;
+  }
+
+  .hamburger-stripe {
+    background-color: white;
+    height: 3px;
+    margin-bottom: 5px;
+  }
+}
+
 @media (min-width: 800px){
 
   .hamburger{
@@ -165,4 +119,128 @@ li > a:hover {
     margin-right: 25px;
   }
 
+
+  .homepage-splash{
+    background-image: url('./images/book-stack-books-education-48126.jpg');
+    background-color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  
+  .splashContainer{
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2.5rem;
+  }
+  
+  .splashContent{
+    text-align: right;
+  }
+  
+  .splashContentWrapper > * {
+    position: absolute;
+    bottom: auto;
+    left: 0;
+    right: auto;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 45%;
+  }
+  
+  .splashHeading {
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 1.15;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .splashParagraph {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 60%;
+    float: right;
+  }
 }
+
+.splashButton{
+  display: inline-block;
+  max-width: 20rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.splashButtonLink{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: #FA6501;
+  color: white;
+  padding: 1.5rem 5rem;
+  font-weight: 700;
+  font-size: 1.15;
+  letter-spacing: .0625;
+  line-height: 1.2222;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.buttonWrapper{
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+/* 
+html{
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 17px;
+  box-sizing: content-box;
+  margin: 0px;
+  padding: 0;
+  font-family: 'Titillium Web', sans-serif;
+} */
+
+/* .home{
+  margin: auto;
+  padding: 0;
+  height:700px;
+  width: 100%;
+  text-align: center;
+  object-fit: contain;
+  background-size: cover;
+  background-position: center center;
+  background: url('./images/accounting-balance-blur-164686.jpg');
+  /*background-image: linear-gradient(to right bottom, #7cb78f, #00a8a3);*/
+
+/* .header{
+  background: url('./images/accounting-balance-blur-164686.jpg');
+  background-size: cover;
+  object-fit: contain;
+  background-position: top;
+  height: 100%;
+}
+
+.layer{
+  background-image: linear-gradient(to right bottom,	rgba(124, 183, 143, .7), 	rgba(0, 168, 163, .7));
+  height: 100%;
+  width: 100%;
+}   */
