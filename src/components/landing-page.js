@@ -18,14 +18,16 @@ export function LandingPage(props) {
     return (
         <div className="home">
             <div className="header">
-            <h2>Welcome to Tick-and-Tie</h2>
-            <LoginForm />
-            <div className='redirect'>
-                New user? <Link to="/register">Register</Link>
-            </div>
-            <div className='redirect'>
-                Or try out the <Link to="/dashboard" onClick={() => demoLogIn({username:'guest', password:'guest12345'})}>Demo</Link> account.
-            </div>
+                <div className="layer">
+                <h2>Welcome to Tick-and-Tie</h2>
+                <LoginForm />
+                <div className='redirect'>
+                    New user? <Link to="/register">Register</Link>
+                </div>
+                <div className='redirect'>
+                    Or try out the <Link to="/dashboard" onClick={() => demoLogIn({username:'guest', password:'guest12345'})}>Demo</Link> account.
+                </div>
+                </div>
             </div>
         </div>
     );

@@ -13,7 +13,19 @@ body {
   box-sizing: content-box;
   margin: 0px;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.normal{
+  font-weight: 400;
+}
+
+.bold, strong {
+  font-weight: 700;
+}
+
+.light{
+  font-weight: 300;
 }
 
 .header-bar{
@@ -23,9 +35,10 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #7CB78F;
-  color: black;
-  padding-left: 24px;
-  padding-right: 24px;
+  color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 5rem;
 }
 
 h2 {
@@ -52,8 +65,15 @@ h2 {
 }
 
 .header{
-  background: url('./images/linh-nguyen-145766-unsplash.7d47e755.jpg');
+  background: url('./images/accounting-balance-blur-164686.jpg');
   background-size: cover;
+  object-fit: contain;
   background-position: top;
-  height: 45%;
+  height: 100%;
 }
+
+.layer{
+  background-image: linear-gradient(to right bottom,	rgba(124, 183, 143, .7), 	rgba(0, 168, 163, .7));
+  height: 100%;
+  width: 100%;
+}  
