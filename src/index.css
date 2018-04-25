@@ -55,6 +55,13 @@ body {
     display: none;
   }
 
+  .ham-menu{
+    background-color: #00A8A3;
+    display: flex;
+  }
+
+
+
   .hamburger {
     position: absolute;
     right: 30px;
@@ -75,22 +82,10 @@ body {
 }
 
 .logo {
+  position: absolute;
   border: none;
   color: white;
-
 }
-/* .header-bar{
-  width: 100%;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #7CB78F;
-  color: white;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  height: 5rem;
-} */
 
 /* .home{
   margin: auto;
@@ -124,7 +119,7 @@ body {
   width: 100%;
 }   */
 
-nav {
+.menu {
   width: 100%;
   height: 5rem;
   display: flex;
@@ -141,6 +136,15 @@ ul, .menu-list-extended {
   flex-direction: row;
 }
 
+li > a {
+  text-decoration: none;
+  color: white;
+}
+
+li > a:hover {
+  text-decoration: underline
+}
+
 @media (min-width: 800px){
 
   .hamburger{
@@ -154,19 +158,11 @@ ul, .menu-list-extended {
   .menu-list-extended {
     height: 100%;
     margin: auto;
-    width: 75%;
+    width: 100%;
     padding: 10px;
     display: flex;
     justify-content: flex-end;
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
-  a:hover {
-    text-decoration: underline
+    margin-right: 25px;
   }
 
 }
