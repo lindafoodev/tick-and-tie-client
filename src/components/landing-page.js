@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Redirect} from 'react-router-dom';
+import {Link,Redirect} from 'react-router-dom';
 
 export function LandingPage(props) {
     // If we are logged in redirect straight to the user's dashboard
@@ -18,8 +18,9 @@ export function LandingPage(props) {
                         <p className="splashParagraph">We leverage spaced repetition techniques to reinforce your learning, you can master just about anything with small and consistent effort. </p>
                         <p className="splashParagraph">We'll begin with blockchain.</p>
                         <div className="splashButton">
-                            <a className="splashButtonLink" role="button" href="/register"><span className="buttonWrapper">Get started</span>
-                            </a>
+                            <Link to="/register" className="splashButtonLink">
+                                <span className="buttonWrapper">Get started</span>
+                            </Link>
                         </div>
                     </div>
                 </div>
