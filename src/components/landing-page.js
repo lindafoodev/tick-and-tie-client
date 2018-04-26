@@ -16,6 +16,7 @@ export function LandingPage(props) {
                     <div className="splashContent">
                         <h1 className="splashHeading">Easy tool to<br/>connect the dots.</h1>
                         <p className="splashParagraph">We leverage spaced repetition techniques to reinforce your learning, you can master just about anything with small and consistent effort. </p>
+                        <p className="splashParagraph">We'll begin with blockchain.</p>
                         <div className="splashButton">
                             <a className="splashButtonLink" role="button" href="/register"><span className="buttonWrapper">Get started</span>
                             </a>
