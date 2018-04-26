@@ -12,9 +12,11 @@ export function RegistrationPage(props) {
     }
     return (
         <div className="home">
-            <h2>Register for Tick-and-Tie</h2>
+            <h2>Register</h2>
             <RegistrationForm />
-            <Link to="/login">Login</Link>
+            <div className='redirect'>
+                Returning user? <Link to="/login">Log in</Link>
+            </div>
         </div>
     );
 }

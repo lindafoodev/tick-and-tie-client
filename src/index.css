@@ -200,6 +200,44 @@ li > a:hover {
   justify-content: center;
   width: 100%;
 }
+
+.deck-form-template{
+  background-color: #7CB78F
+}
+
+p.sideA{
+  margin-top: 0;
+  padding-top: 25px;
+}
+
+.sideA{
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+.form-input{
+  margin: 10px;
+  height: 20%
+}
+
+#answer{
+  height: 100%;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  font-size: 18px;
+}
+
+.answer-button{
+  margin-top: 40px
+}
+
+.emphasis-answer{
+  color: white
+}
+
+form.deck-form{
+  height: 30%;
+}
 /* 
 html{
   overflow: hidden;

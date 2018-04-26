@@ -43,7 +43,7 @@ export class HeaderBar extends React.Component {
                         </li>
                         <li className="menu-list-item noDisplay">
                             <Link to={`/login`} className='link'>
-                                Log In
+                                Log in
                             </Link>
                         </li>
                         <li className="menu-list-item noDisplay">

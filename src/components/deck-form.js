@@ -11,7 +11,6 @@ export class DeckForm extends React.Component {
       return this.props.dispatch(sendAnswer(values));
     }
 
-
     render() {
         let error;
         if (this.props.error) {
@@ -30,19 +29,20 @@ export class DeckForm extends React.Component {
           }
           if(!this.props.inputAnswer) {
             feedback =  (
-                <p className="tag-line">Incorrect, the correct answer is: {this.props.currentAnswer}</p>
+                <p className="tag-line">Incorrect!<br/>Answer<br/> <span className="emphasis-answer">{this.props.currentAnswer}</span></p>
             );
           }
       }
 
         return (
-          <div className='deck-form-template'>
+          <div className='home deck-form-template'>
             <div className='sideA'>
-               <p>{this.props.sideA}</p>
+               <p className='sideA'>{this.props.sideA}</p>
                <div>{feedback}</div>
             </div>
             <form
                 className="deck-form"
+                autoComplete="off"
                 onSubmit={this.props.handleSubmit(values =>
                   this.onSubmit(values)
               )}>

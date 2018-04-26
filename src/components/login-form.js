@@ -19,7 +19,7 @@ export class LoginForm extends React.Component {
             );
         }
         return (
-            <form
+            <form autoComplete="off"
                 className="login-form"
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)

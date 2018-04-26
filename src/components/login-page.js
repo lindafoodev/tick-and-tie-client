@@ -18,7 +18,7 @@ export function LoginPage(props) {
     
     return (
         <div className="home">
-          <h2>Welcome to Tick-and-Tie</h2>
+          <h2>Log in</h2>
               <LoginForm />
                 <div className='redirect'>
                     New user? <Link to="/register">Register</Link>

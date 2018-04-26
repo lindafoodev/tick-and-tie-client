@@ -32,7 +32,7 @@ export function Hamburger(props) {
                         </li>
                         <li className="ham-menu-list-item">
                             <Link to={`/login`} className='link'>
-                                Log In
+                                Log in
                             </Link>
                         </li>
                         <li className="ham-menu-list-item">
