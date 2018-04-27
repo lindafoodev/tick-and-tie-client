@@ -21,15 +21,15 @@ body {
 }
 
 .title{
-  font-size: 2em;
+  font-size: 24px;
 }
 
 .subtitle{
-  font-size: 1.5em;
+  font-size: 16px;
 }
 
 .text{
-  font-size: 1em;
+  font-size: 12px;
 }
 
 
@@ -152,7 +152,7 @@ li > a:hover {
   
   .splashHeading {
     font-weight: 700;
-    font-size: 2.5em;
+    font-size: 24px;
     line-height: 1.15;
     margin-bottom: 0;
     margin-left: 0;
@@ -161,7 +161,7 @@ li > a:hover {
   
   .splashParagraph {
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: 16px;
     line-height: 1.65;
     margin-bottom: 0;
     margin-left: 0;
@@ -212,7 +212,7 @@ p.sideA{
 
 .sideA{
   font-weight: 700;
-  font-size: 1.25em;
+  font-size: 16px;
 }
 
 .form-input{
