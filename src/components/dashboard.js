@@ -10,7 +10,7 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-        let currentScore = Math.round((this.props.correctCount/(this.props.correctCount + this.props.incorrectCount))*100);
+        //let currentScore = Math.round((this.props.correctCount/(this.props.correctCount + this.props.incorrectCount))*100);
         return (
             <div className="dashboard">
                 <DeckForm 
@@ -20,11 +20,13 @@ export class Dashboard extends React.Component {
                     inputAnswer={this.props.inputAnswer}
                     currentAnswer={this.props.currentAnswer}
                     feedback={this.props.feedback}
-                    currentScore={currentScore}/>
+                    />
             </div>
         );
     }
 }
+
+/*currentScore={currentScore}*/
 
 const mapStateToProps = state => {
     const {currentUser} = state.auth;
@@ -37,8 +39,8 @@ const mapStateToProps = state => {
         inputAnswer: state.deckData.inputAnswer,
         currentAnswer: state.deckData.currentAnswer,
         feedback: state.deckData.feedback,
-        correctCount: currentUser.correctCount,
-        incorrectCount: currentUser.incorrectCount
+        //correctCount: currentUser.correctCount,
+        //incorrectCount: currentUser.incorrectCount
     };
 };
 
