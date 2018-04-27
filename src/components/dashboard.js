@@ -10,7 +10,7 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-        let currentScore = this.props.correctCount/(this.props.correctCount + this.props.incorrectCount);
+        let currentScore = Math.round((this.props.correctCount/(this.props.correctCount + this.props.incorrectCount))*100);
         return (
             <div className="dashboard">
                 <DeckForm 

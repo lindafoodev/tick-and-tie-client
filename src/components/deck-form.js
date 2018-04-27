@@ -26,7 +26,7 @@ export class DeckForm extends React.Component {
                 feedback = (
                     <div>
                         <p className="tag-line">Correct!</p>
-                        <p className="tag-line">Score:<span className="emphasis-answer">{this.props.currentScore}%</span> </p>
+                        <p className="tag-line">Score: <span className="emphasis-answer">{this.props.currentScore}%</span> </p>
                     </div>
                 );
             }
