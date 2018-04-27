@@ -20,7 +20,7 @@
 ---
  Tick-and-Tie (TnT) is a learning app to educate users efficiently on blockchain concepts through the use of a simplified Spaced Repetition System (SRS), executed through a linked list data structure.
 
-![homepage screenshot](./screenshots/tnthome.png)
+![homepage screenshot](./public/screenshots/tnthome.png)
 
 ---
 ## Key Features
@@ -64,9 +64,9 @@ Once the dependencies are installed, run an instance of mongod. Then, you can ru
 
 ---
 ## Screenshots
-| <img alt="Home Page" src="./public/screenshots/tnthome.png" width="350"> | <img alt="Card Page" src="./public/screenshots/tntcard.png" width="350"> | <img alt="Response Page" src="./public/screenshots/tntresponse.png" width="350"> |
+| <img alt="Home" src="./public/screenshots/tntmobilehome.png" width="350"> | <img alt="Card" src="./public/screenshots/tntcard.png" width="350"> | <img alt="Feedback" src="./public/screenshots/tntresponse.png" width="350"> |
 |:---:|:---:|:---:|
-| Home Page | Card Page | Response Example |
+| Home | Card | Feedback |
 
 ---
 ## Documentation
@@ -126,7 +126,7 @@ Once the dependencies are installed, run an instance of mongod. Then, you can ru
 ---
 ## History
 * Client| Server
-* 1.0.1 | 1.0.1 - Update README
+* 1.0.1 |- Update README
 * 1.0.0 | 1.0.0 - Initial release
 
 ---
