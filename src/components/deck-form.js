@@ -7,7 +7,7 @@ import {sendAnswer} from '../actions/deck';
 export class DeckForm extends React.Component {
 
     onSubmit(values) {
-        console.log('what is values', values);
+        //console.log('what is values', values);
       return this.props.dispatch(sendAnswer(values));
     }
 

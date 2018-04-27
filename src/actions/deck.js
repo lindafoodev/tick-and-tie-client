@@ -50,7 +50,7 @@ export const fetchCard = (userId) => (dispatch, getState) => {
 
 export const sendAnswer = (values) => (dispatch,getState) => {
   const id = getState().auth.currentUser.id;
-  console.log('what is id', id);
+  //console.log('what is id', id);
   const correct = values.answer === getState().deckData.sideB ? true : false;
   dispatch(setCorrectAnswer(correct, getState().deckData.sideB));
   dispatch(fetchCardNew());
@@ -68,7 +68,7 @@ export const sendAnswer = (values) => (dispatch,getState) => {
     return res.json();
   })
   .then(next => {
-    console.log('what is the next', next);
+    //console.log('what is the next', next);
     dispatch(fetchCardSuccess(next.sideA, next.sideB));
   })
   .catch(err => {

@@ -14,7 +14,7 @@ export class HeaderBar extends React.Component {
     }
 
     logOut() {
-        console.log('log out clicked');
+        //console.log('log out clicked');
         this.props.dispatch(clearAuth());
         clearAuthToken();
         
