@@ -59,7 +59,7 @@ export class DeckForm extends React.Component {
                     placeholder="enter answer here"
                     validate={[required, nonEmpty]}
                 />
-                <button className="answer-button" type="button" onClick={this.handleCard.bind(this)} disabled={this.props.pristine || this.props.submitting}>
+                <button className="answer-button" type="button" disabled={this.props.pristine || this.props.submitting}>
                    Submit 
                 </button>
             </form>
