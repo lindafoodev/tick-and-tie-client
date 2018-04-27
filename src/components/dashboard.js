@@ -10,6 +10,7 @@ export class Dashboard extends React.Component {
     }
 
     render() {
+        let currentScore = this.props.correctCount/(this.props.correctCount + this.props.incorrectCount);
         return (
             <div className="dashboard">
                 <DeckForm 
@@ -18,7 +19,8 @@ export class Dashboard extends React.Component {
                     error={this.props.error}
                     inputAnswer={this.props.inputAnswer}
                     currentAnswer={this.props.currentAnswer}
-                    feedback={this.props.feedback}/>
+                    feedback={this.props.feedback}
+                    currentScore={currentScore}/>
             </div>
         );
     }
@@ -34,7 +36,9 @@ const mapStateToProps = state => {
         error: state.deckData.error,
         inputAnswer: state.deckData.inputAnswer,
         currentAnswer: state.deckData.currentAnswer,
-        feedback: state.deckData.feedback
+        feedback: state.deckData.feedback,
+        correctCount: currentUser.correctCount,
+        incorrectCount: currentUser.incorrectCount
     };
 };
 
