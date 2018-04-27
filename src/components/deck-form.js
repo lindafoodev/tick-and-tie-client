@@ -5,25 +5,6 @@ import {required, nonEmpty} from '../validators';
 import {sendAnswer} from '../actions/deck';
 
 export class DeckForm extends React.Component {
-    constructor(){
-        super();
-        this.state = {
-          showForm: true
-        };
-      }
-
-    handleClick(){
-    this.setState({
-        showForm: true
-    });
-    this.props.reset();
-    }
-
-    handleCard(){
-    this.setState({
-        showForm: false
-    });
-    }
 
     onSubmit(values) {
         console.log('what is values', values);
@@ -31,7 +12,6 @@ export class DeckForm extends React.Component {
     }
 
     render() {
-        let card;
         let error;
         if (this.props.error) {
             error = (
@@ -41,15 +21,11 @@ export class DeckForm extends React.Component {
             );
         }
         let feedback;
-        if(!this.props.showForm){
-            if(this.props.feedback) {
+        if(this.props.feedback) {
             if(this.props.inputAnswer){
                 feedback = (
                     <div>
                         <p className="tag-line">Correct!</p>
-                            <button className="next-button" onClick={this.handleClick.bind(this)}>
-                                Next Question
-                            </button>
                     </div>
                 );
             }
@@ -57,16 +33,13 @@ export class DeckForm extends React.Component {
                 feedback =  (
                     <div>
                         <p className="tag-line">Incorrect!<br/>Answer<br/> <span className="emphasis-answer">{this.props.currentAnswer}</span></p>
-                            <button className="next-button" onClick={this.handleClick.bind(this)}>
-                                Next Question
-                            </button>
                     </div>
                 );
-                }
             }
         }
-      if(this.state.showForm){
-        card = (
+    
+        return (
+            <div className='home deck-form-template'>
             <div className='card'>
             <div className='sideA'>
                <p className='sideA'>{this.props.sideA}</p>
@@ -91,12 +64,6 @@ export class DeckForm extends React.Component {
                 </button>
             </form>
             </div>
-        );
-    }
-
-        return (
-            <div className='home deck-form-template'>
-                {card}
                 {feedback}
             </div>
         );

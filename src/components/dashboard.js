@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchDeck} from '../actions/deck';
+import {fetchCard} from '../actions/deck';
 import DeckForm from './deck-form';
 
 export class Dashboard extends React.Component {
     componentWillMount() {
-        return this.props.dispatch(fetchDeck(this.props.userId));
+        return this.props.dispatch(fetchCard(this.props.userId));
     }
 
     render() {

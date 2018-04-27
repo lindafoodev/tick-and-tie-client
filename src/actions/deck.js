@@ -1,22 +1,22 @@
 import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './utils';
 
-export const FETCH_DECK_NEW = 'FETCH_DECK_NEW';
-export const fetchDeckNew = loading => ({
-  type: FETCH_DECK_NEW,
+export const FETCH_CARD_NEW = 'FETCH_CARD_NEW';
+export const fetchCardNew = loading => ({
+  type: FETCH_CARD_NEW,
   loading
 });
 
-export const FETCH_DECK_SUCCESS = 'FETCH_DECK_SUCCESS';
-export const fetchDeckSuccess = (sideA, sideB) => ({
-    type: FETCH_DECK_SUCCESS,
+export const FETCH_CARD_SUCCESS = 'FETCH_CARD_SUCCESS';
+export const fetchCardSuccess = (sideA, sideB) => ({
+    type: FETCH_CARD_SUCCESS,
     sideA,
     sideB,
 });
 
-export const FETCH_DECK_ERROR = 'FETCH_DECK_ERROR';
-export const fetchDeckError = error => ({
-    type: FETCH_DECK_ERROR,
+export const FETCH_CARD_ERROR = 'FETCH_CARD_ERROR';
+export const fetchCardError = error => ({
+    type: FETCH_CARD_ERROR,
     error,
 });
 
@@ -28,9 +28,9 @@ export const setCorrectAnswer = (inputAnswer, currentAnswer) => ({
 })
 
 
-export const fetchDeck = (userId) => (dispatch, getState) => {
+export const fetchCard = (userId) => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-    dispatch(fetchDeckNew());
+    dispatch(fetchCardNew());
     return fetch(`${API_BASE_URL}/users/`+ userId, {
         method: 'GET',
         headers: {
@@ -41,10 +41,10 @@ export const fetchDeck = (userId) => (dispatch, getState) => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then(data => {
-          dispatch(fetchDeckSuccess(data.sideA, data.sideB));
+          dispatch(fetchCardSuccess(data.sideA, data.sideB));
         })
         .catch(err => {
-            dispatch(fetchDeckError(err));
+            dispatch(fetchCardError(err));
         });
 };
 
@@ -53,7 +53,7 @@ export const sendAnswer = (values) => (dispatch,getState) => {
   console.log('what is id', id);
   const correct = values.answer === getState().deckData.sideB ? true : false;
   dispatch(setCorrectAnswer(correct, getState().deckData.sideB));
-  dispatch(fetchDeckNew());
+  dispatch(fetchCardNew());
   return fetch(`${API_BASE_URL}/users/` + id, {
     method: 'PUT',
     headers: {
@@ -69,9 +69,9 @@ export const sendAnswer = (values) => (dispatch,getState) => {
   })
   .then(next => {
     console.log('what is the next', next);
-    dispatch(fetchDeckSuccess(next.sideA, next.sideB));
+    dispatch(fetchCardSuccess(next.sideA, next.sideB));
   })
   .catch(err => {
-    dispatch(fetchDeckError(err))
+    dispatch(fetchCardError(err))
   }) 
 }
