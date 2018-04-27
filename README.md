@@ -126,7 +126,9 @@ Once the dependencies are installed, run an instance of mongod. Then, you can ru
 ---
 ## History
 * Client| Server
-* 1.0.1 |- Update README
+* 1.1.1 | - Add View Change
+* 1.0.1 | - Styling Updates
+* 1.0.1 | - Update README
 * 1.0.0 | 1.0.0 - Initial release
 
 ---
