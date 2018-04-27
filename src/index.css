@@ -173,9 +173,10 @@ li > a:hover {
 
 .splashButton{
   display: inline-block;
-  max-width: 15em;
-  width: 100%;
-  margin-top: 1.5em;
+  width: 45%;
+  min-width: 300px;
+  max-width: 300px;
+  margin-top: 40px;
 }
 
 .splashButtonLink{
