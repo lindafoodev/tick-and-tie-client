@@ -18,7 +18,7 @@
 </p>
 
 ---
- Tick-and-Tie (TnT) is a learning app to educate users efficiently on blockchain concepts through the use of a simplified Spaced Repetition System (SRS), executed through a linked list data structure.
+ Tick-and-Tie (TnT) is a learning app to educate users efficiently on blockchain concepts through the use of a simplified Spaced Repetition System (SRS).
 
 ![homepage screenshot](./public/screenshots/tnthome.png)
 
